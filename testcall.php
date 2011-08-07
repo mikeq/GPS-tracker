@@ -1,4 +1,5 @@
 <?php
+//testing from eclipse
     require_once 'lib/instamapper.class.php';
     require_once 'lib/importdata.class.php';
 
