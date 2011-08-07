@@ -1,7 +1,5 @@
 <?php
 //testing from eclipse
-//another change on the master branch
-//this is added to experimental
     require_once 'lib/instamapper.class.php';
     require_once 'lib/importdata.class.php';
 
