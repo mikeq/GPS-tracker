@@ -1,0 +1,13 @@
+This code basically interacts with GPS data uploaded from GPS Tracker by Instamapper for Android phones.
+
+See http://www.instamapper.com/ for more details on installing the app and activating.
+
+The code I have written will perdiodically (dependent on how often you run the import script scripts/getgpsdata.php)
+retrieve and will import into a local database.  You can then use this data for various purposes such as displaying
+current position (Location::getLastLocation) on map.
+
+The 'tracks' stored in the database basically get a tag based on todays date Ymd, so all data points on a particular
+date will be assumed to be part of the same track for that day.
+
+A KML file can be generated for a track (KmlLibrary::write), this can be done periodically with scripts/writekml.php in
+a cron job to keep 'todays' track constantly updated.  These KML files can then be displayed on a map.
