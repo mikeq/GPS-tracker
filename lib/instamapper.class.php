@@ -103,17 +103,18 @@ class InstaMapper
                 $this->_format
             );
         } else {
+            $adjustedTimeStamp = strtotime('+1 SECOND', $timeStamp);
             $url = sprintf(
                 'http://www.instamapper.com/api?action=getPositions&key=%s&num=%d&from_ts=%d&format=%s',
                 $this->_apiKey,
                 $numberPoints,
-                $timeStamp,
+                $adjustedTimeStamp,
                 $this->_format
             );
         }
 
-
         $content = file_get_contents($url);
+
         return $content;
     }
 }

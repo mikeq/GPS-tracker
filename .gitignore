@@ -1,4 +1,5 @@
 .settings
 .buildpath
-.project
+.project/mykeys.php
 /mykeys.php
+settings_custom.class.php
